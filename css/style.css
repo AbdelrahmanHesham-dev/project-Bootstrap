@@ -1,0 +1,271 @@
+:root {
+    --dark-color: #19283f;
+    --green-color: #33d1cc;
+    --red-color: #ff3150;
+    --yellow-color: #ffc400;
+    --section-color: #eff7fa;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-btn {
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+    padding: 0.5rem 1rem;
+}
+
+.main-btn:hover {
+    background-color: var(--green-color);
+
+}
+
+.main-title::after {
+    content: "";
+    width: 120px;
+    height: 2px;
+    background-color: var(--green-color);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/****************************************start navbar**************************************************/
+
+.navbar {
+    background-color: var(--dark-color);
+}
+
+.navbar .navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+    color: var(--green-color);
+}
+
+.navbar .search {
+    border-left: solid 1px var(--green-color);
+}
+
+.navbar .search svg {
+    color: var(--green-color);
+}
+
+.navbar .navbar-toggler {
+    color: white;
+    font-size: 25px;
+    border-color: white;
+}
+
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar .navbar-toggler[aria-expanded="true"] {
+    border-color: var(--green-color);
+}
+
+/****************************************end navbar**************************************************/
+
+.landing {
+    background-color: var(--dark-color);
+    min-height: calc(100vh - 72px);
+}
+
+
+/****************************************end landing**************************************************/
+.features .icon-holder {
+    height: 200px;
+}
+
+.features .icon-holder svg {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.features .icon-holder .number {
+    font-size: 12rem;
+    color: var(--section-color);
+
+}
+
+.features .icon-holder .icon {
+    color: var(--green-color);
+}
+
+.features .feat h4 {
+    color: var(--yellow-color);
+}
+
+
+
+/****************************************end features**************************************************/
+.our-work {
+    background-color: var(--section-color);
+}
+
+.our-work ul .active {
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+}
+
+.our-work ul li {
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+}
+
+.our-work ul li:not(.active):hover {
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+
+}
+
+.our-work .box {
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.our-work .container .row {
+    display: flex;
+}
+
+.our-work .box::before {
+    content: attr(data-work);
+    position: absolute;
+    background-color: #19263fcf;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    font-size: 1.5rem;
+    transition: 0.5s;
+    transform: translateX(calc(-100% - 5px));
+
+}
+
+.our-work .box:hover::before {
+    transform: translateX(0);
+}
+
+/****************************************end our-work**************************************************/
+
+.team {
+    background-color: var(--section-color);
+}
+
+.team h2 {
+    color: var(--yellow-color);
+}
+
+.team .container .row .box h4 {
+    background-color: var(--dark-color);
+    color: white;
+
+}
+
+.team .container .row .box {
+    transition: 0.3s;
+}
+
+
+.team .container .row .box:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+@media (max-width: 900px) {
+
+    .team .container .row .box{
+        width: 400px;
+        margin: auto;
+    
+    }
+}
+/****************************************end team**************************************************/
+.project {
+    background-color: var(--dark-color);
+    height: 400px;
+}
+
+.project h2 {
+    margin-top: 60px;
+}
+
+.project h2,
+.project p {
+    color: white;
+}
+/****************************************end project**************************************************/
+.subscribe {
+    background-color: var(--yellow-color);
+}
+
+.subscribe input[type="text"] {
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+.subscribe input[type="text"]:focus {
+    outline: none;
+}
+
+.subscribe ::placeholder {
+    color: white;
+}
+
+.subscribe input[type="submit"] {
+    background: var(--dark-color);
+    color: var(--yellow-color);
+}
+/****************************************end subscribe**************************************************/
+.footer {
+    background-color: var(--dark-color);
+}
+
+.footer .Abdelrahman {
+    color: var(--green-color);
+}
+
+.footer .Bondi {
+    color: var(--yellow-color);
+}
+
+.links ul li a {
+    text-decoration: none;
+    
+}
+
+.footer .facebook {
+    width: 20px;
+    height: 20px;
+    background-color: #1877f2;
+}
+.footer .linkedin {
+    width: 20px;
+    height: 20px;
+    background-color: #1da1f2;
+}
+.footer .twitter {
+    width: 20px;
+    height: 20px;
+    background-color: #0077b5;
+}
+.footer .youtube {
+    width: 20px;
+    height: 20px;
+    background-color: #ff0000;
+}
