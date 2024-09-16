@@ -160,6 +160,13 @@ body {
     transform: translateX(0);
 }
 
+@media (max-width: 500px) {
+    .our-work ul li {
+        padding: 0.5rem 0.7rem;
+        cursor: pointer;
+    }
+}
+
 /****************************************end our-work**************************************************/
 
 .team {
@@ -190,11 +197,12 @@ body {
 @media (max-width: 900px) {
 
     .team .container .row .box{
-        width: 400px;
+        width: 300px;
         margin: auto;
     
     }
 }
+
 /****************************************end team**************************************************/
 .project {
     background-color: var(--dark-color);
